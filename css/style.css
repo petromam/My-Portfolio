@@ -1,0 +1,180 @@
+/*================================================ GENERAL Styling ================================================*/
+*{
+	font-family: 'Montserrat', Arial, sans-serif;
+	box-sizing: border-box;
+	
+	text-align: center;
+	line-height: 2rem;
+	
+	margin: 0;
+	padding: 0;
+}
+
+p{
+	font-size: 18px;
+}
+
+h1,
+h2{
+	color: #3943b7;
+	margin-bottom: 0.75rem;
+}
+
+li{
+	display: inline-block;
+}
+
+/*================================================ HEADER Section ================================================*/
+header{
+	color: #3943b7;
+	
+	background-image: url("../img/header.jpg");
+	background-size: cover;
+	background-position: center;
+	
+	-webkit-box-shadow: 0px 11px 20px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: 0px 11px 20px 0px rgba(0,0,0,0.45);
+	box-shadow: 0px 11px 20px 0px rgba(0,0,0,0.45);
+	
+	margin-bottom: 1rem;
+}
+
+header .content{
+	padding: 20px;
+	/*background-color: rgba(255, 255, 255, 0.9);*/
+	background: -moz-linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(252,252,252,0.95) 25%, rgba(252,252,252,0.95) 75%, rgba(252,252,252,0.7) 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0.7)), color-stop(25%, rgba(252,252,252,0.95)), color-stop(75%, rgba(252,252,252,0.95)), color-stop(100%, rgba(252,252,252,0.7))); /* safari4+,chrome */
+	background: -webkit-linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(252,252,252,0.95) 25%, rgba(252,252,252,0.95) 75%, rgba(252,252,252,0.7) 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(252,252,252,0.95) 25%, rgba(252,252,252,0.95) 75%, rgba(252,252,252,0.7) 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(252,252,252,0.95) 25%, rgba(252,252,252,0.95) 75%, rgba(252,252,252,0.7) 100%); /* ie10+ */
+	background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(252,252,252,0.95) 25%, rgba(252,252,252,0.95) 75%, rgba(252,252,252,0.7) 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#FCFCFC',GradientType=1 ); /* ie6-9 */
+}
+
+/*================================================ NAVIGATION Bar ================================================*/
+nav ul li a,
+#work #projects .project a{
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	
+	display: block;
+	padding: 1.2rem;
+	margin: 0.5rem;
+	background-color: #3943b7;
+	border-radius: 4px;
+	
+	cursor: pointer;
+	
+	transition: all 0.3s linear;
+}
+
+nav ul li a:hover,
+#work #projects .project a:hover{
+	background-color: #ff206e;
+}
+
+/*================================================= MAIN Section ==================================================*/
+main{
+	max-width: 1024px;
+	margin: 1rem auto;
+}
+
+main #intro #enjoy{
+	color: #ff206e;
+	font-weight: 700;
+}
+
+main #work{
+	margin-top: 5%;
+}
+
+main #work #projects .project{
+	padding: 2%;
+	margin-bottom: 4%;
+	
+	border: 1px solid #c2c5bb;
+	border-radius: 4px;
+	
+	-webkit-box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.45);
+	box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.45);
+}
+
+main #work #projects .project .flex img{
+	width: 100%;
+	/*max-width: 360px;*/
+}
+
+/*================================================ FOOTER Section ================================================*/
+footer a span{
+	margin: 1.25rem;
+	cursor: pointer;
+}
+
+footer a #fb{
+	color: #3b5998;
+}
+footer a #ttr{
+	color: #0084b4;
+}
+footer a #lnk{
+	color: #0077b5;
+}
+
+/*================================================ MediaQueries ================================================*/
+@media screen and (max-width: 1023px){
+	main{
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
+	}
+}
+
+/* Trageting Nexus 5 =======================*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+	main #work #projects .project .flex{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-content: center;
+	}
+	
+	main #work #projects .project .flex .left{
+		order: -1;
+	}
+	
+	main #work #projects .project .flex .left,
+	main #work #projects .project .flex .right{
+		margin: 0 0.5rem;
+	}
+	
+	main #work #projects .project .flex img{
+		width: 50%;
+	}
+}
+
+/* Trageting iPad =========================*/
+@media screen and (min-width: 1024px){
+	nav{
+		display: none;
+	}
+	
+	main #work #projects{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		align-content: center;
+	}
+	
+	main #work #projects .project{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		
+		padding: 2%;
+		margin: 0 0.25rem;
+	}
+}
